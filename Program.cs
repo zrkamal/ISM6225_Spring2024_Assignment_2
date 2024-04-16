@@ -586,8 +586,39 @@ namespace ISM6225_Spring_2024_Assignment_2
         {
             try
             {
-                // Write your code here and you can modify the return value according to the requirements
-                return "";
+             int index =0;
+             int pleng = part.Length;
+             int sleng = s.length;
+             string result = "";
+             
+             while (index <= sleng - pleng)
+             {
+              bool found = true;
+             for (int i = 0; i < partLength; i++)
+             {
+                if (s[index + i] != part[i])
+                {
+                    found = false;
+                    break;
+                }
+             }
+              if (found)
+            {
+                index += partLength; 
+            }
+            else
+            {
+               
+                result += s[index];
+                index++;
+            }
+             while (index < sLength)
+        {
+            result += s[index];
+            index++;
+        }
+             }
+             return result;
             }
             catch (Exception)
             {
