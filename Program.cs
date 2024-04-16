@@ -594,7 +594,7 @@ namespace ISM6225_Spring_2024_Assignment_2
              while (index <= sleng - pleng)
              {
               bool found = true;
-             for (int i = 0; i < partLength; i++)
+             for (int i = 0; i < pleng; i++)
              {
                 if (s[index + i] != part[i])
                 {
@@ -604,7 +604,7 @@ namespace ISM6225_Spring_2024_Assignment_2
              }
               if (found)
             {
-                index += partLength; 
+                index += pleng; 
             }
             else
             {
@@ -612,7 +612,7 @@ namespace ISM6225_Spring_2024_Assignment_2
                 result += s[index];
                 index++;
             }
-             while (index < sLength)
+             while (index < sleng)
         {
             result += s[index];
             index++;
